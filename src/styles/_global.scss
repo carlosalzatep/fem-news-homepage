@@ -1,0 +1,70 @@
+@use "variables" as *;
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('ttf') tech('variations');
+  font-weight: $base-font-weights;
+}
+
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px $primary-soft-orange;
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $neutral-almost-white;
+  color: $neutral-dark-grayish-blue;
+  font-family: $base-font-family;
+  font-size: 1.6rem;
+  padding: 28px 16px;
+}
+
+h1 {
+  color: $neutral-very-dark-blue;
+  font-size: 4.0rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.73;
+}
+
+a {
+  color: $neutral-very-dark-blue;
+  text-decoration: none;
+}
+
+.btn {
+  color: $neutral-almost-white;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 4.375px;
+  line-height: 1.71;
+  margin-top: 0.57em;
+  padding: 0.928em 2.5em 0.78em 2.21em;
+  text-transform: uppercase;
+  width: fit-content;
+
+  &--primary {
+    background-color: $primary-soft-red;
+
+    &:hover {
+      background-color: $primary-soft-orange;
+    }
+  }
+}
+
+footer {
+  font-size: 1.2rem;
+}

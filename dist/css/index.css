@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+button,
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("ttf") tech("variations");
+  font-weight: 400, 700, 800;
+}
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px hsl(35, 77%, 62%);
+}
+
+html {
+  /* 10px */
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(36, 100%, 99%);
+  color: hsl(236, 13%, 42%);
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  padding: 28px 16px;
+}
+
+h1 {
+  color: hsl(240, 100%, 5%);
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1;
+}
+
+p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.73;
+}
+
+a {
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+}
+
+.btn {
+  color: hsl(36, 100%, 99%);
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 4.375px;
+  line-height: 1.71;
+  margin-top: 0.57em;
+  padding: 0.928em 2.5em 0.78em 2.21em;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.btn--primary {
+  background-color: hsl(5, 85%, 63%);
+}
+.btn--primary:hover {
+  background-color: hsl(35, 77%, 62%);
+}
+
+footer {
+  font-size: 1.2rem;
+}
+
+.header {
+  position: relative;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.header__logo {
+  width: 45px;
+  height: 28px;
+}
+.header__nav .nav__open-buttom {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 30px;
+  width: 40px;
+}
+.header__nav .nav__open-buttom.active ~ .nav__menu {
+  display: flex;
+  flex-direction: column;
+  transform: translate(0, 0);
+}
+.header__nav .nav__open-buttom.active ~ .menu__gray-overlay {
+  display: block;
+  transform: translate(0, 0);
+}
+.header__nav .nav__menu {
+  background-color: hsl(36, 100%, 99%);
+  display: none;
+  height: 100vh;
+  padding: 27px 20px 20px 24px;
+  position: absolute;
+  right: -16px;
+  top: -28px;
+  transform: translate(100%, -100%);
+  width: 70vw;
+  z-index: 2;
+}
+.header__nav .nav__menu .menu__close {
+  align-items: center;
+  align-self: flex-end;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 30px;
+  width: 30px;
+}
+.header__nav .nav__menu .menu__list {
+  color: hsl(240, 100%, 5%);
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: center;
+  margin-top: 86px;
+}
+.header__nav .menu__gray-overlay {
+  background-color: hsl(240, 100%, 5%);
+  display: none;
+  height: 100vh;
+  opacity: 0.5;
+  position: absolute;
+  right: -16px;
+  top: -28px;
+  width: 100vw;
+}
+
+main {
+  display: grid;
+  gap: 6.4rem;
+  padding: 2.4rem 0;
+}
+main .intro {
+  display: grid;
+  gap: 1.6rem;
+}
+main .news-links {
+  background-color: hsl(240, 100%, 5%);
+  padding: 24px 20px;
+}
+main .news-links__title {
+  color: hsl(35, 77%, 62%);
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 3.4rem;
+}
+main .news-links__list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+}
+main .news-links__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-bottom: 2.9rem;
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+}
+main .news-links__item .item__title {
+  color: hsl(36, 100%, 99%);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.2;
+}
+main .news-links__item .item__text {
+  color: hsl(233, 8%, 79%);
+  font-size: 1.5rem;
+  font-style: normal;
+}

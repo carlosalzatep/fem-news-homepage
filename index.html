@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | News homepage</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./dist/css/index.css" />
+</head>
+<body>
+  <header class="header">
+    <section class="header__top">
+      <img src="./assets/images/logo.svg" alt="W. logo" class="header__logo">
+      <nav class="header__nav">
+        <button id="js-open-button" class="nav__open-buttom">
+          Open menu
+          <img src="./assets/images/icon-menu.svg">
+        </button>
+        <div id="js-nav-menu" class="nav__menu">
+          <button id="js-close-button" class="menu__close">
+            Close menu
+            <img src="./assets/images/icon-menu-close.svg">
+          </button>
+          <ul class="menu__list">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">New</a>
+            </li>
+            <li>
+              <a href="#">Popular</a>
+            </li>
+            <li>
+              <a href="#">Trending</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu__gray-overlay"></div>
+      </nav>
+    </section>
+    <picture class="header__banner">
+      <source
+        srcset="./assets/images/image-web-3-desktop.jpg"
+        media="(min-width: 768px)"
+      >
+      <img
+        class="banner__img"
+        src="./assets/images/image-web-3-mobile.jpg"
+        alt="Set of random 3d geometric linked images of different colors and sizes"
+      >
+    </picture>
+  </header>
+  <main>
+    <section class="intro">
+      <h1>The Bright Future of Web 3.0?</h1>
+      <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+        But is it really fulfilling its promise?</p>
+      <a class="btn btn--primary" href="#">Read more</a>
+    </section>
+    <section class="news-links">
+      <h2 class="news-links__title">New</h2>
+      <ul class="news-links__list">
+        <li class="news-links__item">
+          <h3 class="item__title">Hydrogen VS Electric Cars</h3>
+          <p class="item__text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </li>
+        <li class="news-links__item">
+          <h3 class="item__title">The Downsides of AI Artistry</h3>
+          <p class="item__text">What are the possible adverse effects of on-demand AI image generation?</p>
+        </li>
+        <li class="news-links__item">
+          <h3 class="item__title">Is VC Funding Drying Up?</h3>
+          <p class="item__text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+          <img src="./assets/images/image-retro-pcs.jpg" alt="" >
+          <span>01</span>
+          <h2>Reviving Retro PCs</h2>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </li>
+        <li>
+          <img src="./assets/images/image-top-laptops.jpg" alt="" >
+          <span>02</span>
+          <h2>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </li>
+        <li>
+          <img src="./assets/images/image-gaming-growth.jpg" alt="" >
+          <span>03</span>
+          <h2>The Growth of Gaming</h2>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Carlos Alzate</a>.
+    </div>
+  </footer>
+
+  <script src="./src/js/index.js"></script>
+</body>
+</html>

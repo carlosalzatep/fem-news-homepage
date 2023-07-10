@@ -21,7 +21,13 @@ body {
   color: $neutral-dark-grayish-blue;
   font-family: $base-font-family;
   font-size: 1.6rem;
+  margin: auto;
+  max-width: $desktop-width;
   padding: 28px 16px;
+
+  @media screen and (width > $desktop-breakpoint) {
+    padding: 28px 0;
+  }
 }
 
 h1 {
@@ -36,31 +42,36 @@ p {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.73;
+  line-height: 2.6rem;
 }
 
 a {
   color: $neutral-very-dark-blue;
   text-decoration: none;
+
+  &:hover {
+    color: $primary-soft-red;
+  }
 }
 
 .btn {
   color: $neutral-almost-white;
+  display: block;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 4.375px;
-  line-height: 1.71;
-  margin-top: 0.57em;
-  padding: 0.928em 2.5em 0.78em 2.21em;
+  line-height: 2.4rem;
+  padding: 1.3rem 3.5rem 1.1rem 3.1rem;
   text-transform: uppercase;
-  width: fit-content;
+  width: max-content;
 
   &--primary {
     background-color: $primary-soft-red;
 
     &:hover {
-      background-color: $primary-soft-orange;
+      background-color: $neutral-very-dark-blue;
+      color: $neutral-almost-white;
     }
   }
 }

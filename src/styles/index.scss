@@ -3,20 +3,51 @@
 @use "global";
 
 .header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 32px;
-  }
 
   &__logo {
     width: 45px;
     height: 28px;
+    @media screen and (min-width: $desktop-breakpoint) {
+      width: 65px;
+      height: 40px;
+    }
   }
 
   &__nav {
+    &--mobile {
+      @media screen and (min-width: $desktop-breakpoint) {
+        display: none;
+      }
+
+      .list__item {
+        color: $neutral-very-dark-blue;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    &--desktop {
+      display: none;
+      @media screen and (min-width: $desktop-breakpoint) {
+        display: block;
+      }
+
+      .menu__list {
+        display: flex;
+        gap: 40px;
+      }
+
+      .list__item {
+        color: $neutral-dark-grayish-blue;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+      }
+    }
+
     .nav__open-buttom {
       align-items: center;
       cursor: pointer;
@@ -27,7 +58,6 @@
 
       &.active ~ .nav__menu {
         display: flex;
-        flex-direction: column;
         transform: translate(0, 0);
       }
       &.active ~ .menu__gray-overlay{
@@ -39,12 +69,14 @@
     .nav__menu {
       background-color: $neutral-almost-white;
       display: none;
+      flex-direction: column;
       height: 100vh;
       padding: 27px 20px 20px 24px;
       position: absolute;
       right: -16px;
       top: -28px;
-      transform: translate(100%, -100%);
+      transform: translate(100%, 0);
+      transition: transform 0.5s ease-in 0s;
       width: 70vw;
       z-index: 2;
 
@@ -59,7 +91,6 @@
       }
 
       .menu__list {
-        color: $neutral-very-dark-blue;
         align-items: flex-start;
         display: flex;
         flex-direction: column;
@@ -85,11 +116,44 @@
 main {
   display: grid;
   gap: 6.4rem;
-  padding: 2.4rem 0;
+  padding: 3.2rem 0;
+
+  @media screen and (min-width: $desktop-breakpoint) {
+    gap: 7.0rem 3.0rem;
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 1fr;
+    padding: 5.5rem 0;
+  }
 
   .intro {
     display: grid;
-    gap: 1.6rem;
+    gap: 2.4rem;
+
+    @media screen and (min-width: $desktop-breakpoint) {
+      gap: 2.8rem;
+    }
+
+    &__content {
+      display: grid;
+      gap: 1.6rem;
+
+      .btn {
+        margin-top: 2.4rem;
+      }
+
+      @media screen and (min-width: $desktop-breakpoint) {
+        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+
+        .intro-content__title {
+          font-size: 5.6rem;
+        }
+
+        .btn {
+          margin-top: 1.7rem;
+        }
+      }
+    }
   }
 
   .news-links {
@@ -101,7 +165,12 @@ main {
       font-size: 3.2rem;
       font-style: normal;
       font-weight: 700;
+      line-height: 1;
       margin-bottom: 3.4rem;
+
+      @media screen and (min-width: $desktop-breakpoint) {
+        font-size: 4rem;
+      }
     }
 
     &__list {
@@ -114,20 +183,73 @@ main {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
-      padding-bottom: 2.9rem;
-      border-bottom: 1px solid $neutral-dark-grayish-blue;
 
-      .item__title {
+      &--bottom-bound {
+        padding-bottom: 2.9rem;
+        border-bottom: 1px solid $neutral-dark-grayish-blue;
+      }
+
+      .item__title a {
         color: $neutral-almost-white;
         font-size: 2.0rem;
         font-style: normal;
         font-weight: 800;
-        line-height: 1.2;
+        line-height: 2.4rem;
+
+        &:hover {
+          color: $primary-soft-orange;
+        }
       }
       .item__text {
         color: $neutral-grayish-blue;
         font-size: 1.5rem;
         font-style: normal;
+      }
+    }
+  }
+
+  .top-news {
+
+    @media screen and (min-width: $desktop-breakpoint) {
+      grid-column: span 2;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 3.1rem;
+
+      @media screen and (min-width: $desktop-breakpoint) {
+        flex-direction: row;
+      }
+    }
+
+    &__item {
+      &-container {
+        display: flex;
+        gap: 2.5rem;
+      }
+      .item__img {
+        width: 100px;
+      }
+      .item__content {
+        display: grid;
+        gap: 0.9rem;
+      }
+      .item__number {
+        color: $neutral-grayish-blue;
+        font-size: 3.2rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3.2rem;
+        margin-bottom: 0.3rem;
+      }
+      .item__title {
+        color: $neutral-very-dark-blue;
+        font-size: 1.7rem;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 2.4rem;
       }
     }
   }

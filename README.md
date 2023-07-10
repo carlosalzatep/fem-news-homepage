@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/landing-page-htmljscss-aILH4o4set](https://www.frontendmentor.io/solutions/landing-page-htmljscss-aILH4o4set)
+- Live Site URL: [https://carlosalzatep-fem-news-homepage.netlify.app/](https://carlosalzatep-fem-news-homepage.netlify.app/)
 
 ## My process
 

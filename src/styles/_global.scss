@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 @font-face {
 	font-family: 'Inter';
@@ -13,14 +14,15 @@
 
 html {
   /* 10px */
-  font-size: 62.5%;
+  // font-size: 62.5%;
+  margin-top: 62px; // hacky margin just to fit Figma design
 }
 
 body {
   background-color: $neutral-almost-white;
   color: $neutral-dark-grayish-blue;
   font-family: $base-font-family;
-  font-size: 1.6rem;
+  font-size: rem(16px);
   margin: auto;
   max-width: $desktop-width;
   padding: 28px 16px;
@@ -32,17 +34,17 @@ body {
 
 h1 {
   color: $neutral-very-dark-blue;
-  font-size: 4.0rem;
+  font-size: rem(40px);
   font-style: normal;
   font-weight: 800;
   line-height: 1;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: rem(15px);
   font-style: normal;
   font-weight: 400;
-  line-height: 2.6rem;
+  line-height: rem(26px);
 }
 
 a {
@@ -57,12 +59,12 @@ a {
 .btn {
   color: $neutral-almost-white;
   display: block;
-  font-size: 1.4rem;
+  font-size: rem(14px);
   font-style: normal;
   font-weight: 700;
   letter-spacing: 4.375px;
-  line-height: 2.4rem;
-  padding: 1.3rem 3.5rem 1.1rem 3.1rem;
+  line-height: rem(24px);
+  padding: rem(13px) rem(35px) rem(11px) rem(31px);
   text-transform: uppercase;
   width: max-content;
 
@@ -77,5 +79,17 @@ a {
 }
 
 footer {
-  font-size: 1.2rem;
+  font-size: rem(12px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

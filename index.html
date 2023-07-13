@@ -10,15 +10,15 @@
 <body>
   <header class="header">
     <img src="./assets/images/logo.svg" alt="W. logo" class="header__logo">
-    <nav class="header__nav header__nav--mobile">
+    <nav class="header__nav" aria-label="Home page">
       <button id="js-open-button" class="nav__open-buttom">
         Open menu
-        <img src="./assets/images/icon-menu.svg">
+        <img src="./assets/images/icon-menu.svg" alt="">
       </button>
       <div id="js-nav-menu" class="nav__menu">
         <button id="js-close-button" class="menu__close">
           Close menu
-          <img src="./assets/images/icon-menu-close.svg">
+          <img src="./assets/images/icon-menu-close.svg" alt="">
         </button>
         <ul class="menu__list">
           <li class="list__item">
@@ -39,25 +39,6 @@
         </ul>
       </div>
       <div class="menu__gray-overlay"></div>
-    </nav>
-    <nav class="header__nav header__nav--desktop">
-        <ul class="menu__list">
-          <li class="list__item">
-            <a href="#">Home</a>
-          </li>
-          <li class="list__item">
-            <a href="#">New</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Popular</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Trending</a>
-          </li>
-          <li class="list__item">
-            <a href="#">Categories</a>
-          </li>
-        </ul>
     </nav>
   </header>
   <main>
@@ -83,7 +64,9 @@
       </div>
     </section>
     <section class="news-links">
-      <h2 class="news-links__title">New</h2>
+      <h2 class="news-links__title" aria-label="New posts">
+        <span aria-hidden="true">New</span>
+      </h2>
       <ul class="news-links__list">
         <li class="news-links__item news-links__item--bottom-bound">
           <h3 class="item__title">
@@ -106,39 +89,40 @@
       </ul>
     </section>
     <section class="top-news">
+      <h2 class="sr-only">Top News</h2>
       <ul class="top-news__list">
         <li class="top-news__item">
           <article class="top-news__item-container">
             <img src="./assets/images/image-retro-pcs.jpg" alt="Retro personal computer surrounded by audio cassettes and gamer stuff" class="item__img" >
             <div class="item__content">
               <span class="item__number">01</span>
-              <h2 class="item__title">
+              <h3 class="item__title">
                 <a href="#">Reviving Retro PCs</a>
-              </h2>
+              </h3>
               <p class="item__text">What happens when old PCs are given modern upgrades?</p>
             </div>
           </article>
         </li>
         <li class="top-news__item">
           <article class="top-news__item-container">
-            <img src="./assets/images/image-top-laptops.jpg" alt="" class="item__img" >
+            <img src="./assets/images/image-top-laptops.jpg" alt="black keyboard red keycaps" class="item__img" >
             <div class="item__content">
               <span class="item__number">02</span>
-              <h2 class="item__title">
+              <h3 class="item__title">
                 <a href="#">Top 10 Laptops of 2022</a>
-              </h2>
+              </h3>
               <p class="item__text">Our best picks for various needs and budgets.</p>
             </div>
           </article>
         </li>
         <li class="top-news__item">
           <article class="top-news__item-container">
-            <img src="./assets/images/image-gaming-growth.jpg" alt="" class="item__img" >
+            <img src="./assets/images/image-gaming-growth.jpg" alt="gamepad male hand throwing up white background play control" class="item__img" >
             <div class="item__content">
               <span class="item__number">03</span>
-              <h2 class="item__title">
+              <h3 class="item__title">
                 <a href="#">The Growth of Gaming</a>
-              </h2>
+              </h3>
               <p class="item__text">How the pandemic has sparked fresh opportunities.</p>
             </div>
           </article>

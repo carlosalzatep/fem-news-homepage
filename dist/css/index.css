@@ -68,14 +68,14 @@ input {
 
 html {
   /* 10px */
-  font-size: 62.5%;
+  margin-top: 62px;
 }
 
 body {
   background-color: hsl(36, 100%, 99%);
   color: hsl(236, 13%, 42%);
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   margin: auto;
   max-width: 1110px;
   padding: 28px 16px;
@@ -88,17 +88,17 @@ body {
 
 h1 {
   color: hsl(240, 100%, 5%);
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-style: normal;
   font-weight: 800;
   line-height: 1;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 2.6rem;
+  line-height: 1.625rem;
 }
 
 a {
@@ -112,12 +112,12 @@ a:hover {
 .btn {
   color: hsl(36, 100%, 99%);
   display: block;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 4.375px;
-  line-height: 2.4rem;
-  padding: 1.3rem 3.5rem 1.1rem 3.1rem;
+  line-height: 1.5rem;
+  padding: 0.8125rem 2.1875rem 0.6875rem 1.9375rem;
   text-transform: uppercase;
   width: -moz-max-content;
   width: max-content;
@@ -131,7 +131,19 @@ a:hover {
 }
 
 footer {
-  font-size: 1.2rem;
+  font-size: 0.75rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .header {
@@ -150,33 +162,6 @@ footer {
     height: 40px;
   }
 }
-@media screen and (min-width: 1024px) {
-  .header__nav--mobile {
-    display: none;
-  }
-}
-.header__nav--mobile .list__item {
-  color: hsl(240, 100%, 5%);
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-}
-.header__nav--desktop {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .header__nav--desktop {
-    display: block;
-  }
-}
-.header__nav--desktop .menu__list {
-  display: flex;
-  gap: 40px;
-}
-.header__nav--desktop .list__item {
-  color: hsl(236, 13%, 42%);
-  font-size: 1.5rem;
-  line-height: 2.6rem;
-}
 .header__nav .nav__open-buttom {
   align-items: center;
   cursor: pointer;
@@ -193,6 +178,15 @@ footer {
   display: block;
   transform: translate(0, 0);
 }
+.header__nav .menu__close {
+  align-items: center;
+  align-self: flex-end;
+  cursor: pointer;
+  display: flex;
+  font-size: 0;
+  height: 30px;
+  width: 30px;
+}
 .header__nav .nav__menu {
   background-color: hsl(36, 100%, 99%);
   display: none;
@@ -207,20 +201,11 @@ footer {
   width: 70vw;
   z-index: 2;
 }
-.header__nav .nav__menu .menu__close {
-  align-items: center;
-  align-self: flex-end;
-  cursor: pointer;
-  display: flex;
-  font-size: 0;
-  height: 30px;
-  width: 30px;
-}
-.header__nav .nav__menu .menu__list {
+.header__nav .menu__list {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.5rem;
   justify-content: center;
   margin-top: 86px;
 }
@@ -234,46 +219,78 @@ footer {
   top: -28px;
   width: 100vw;
 }
+@media screen and (min-width: 1024px) {
+  .header__nav .nav__menu {
+    background-color: unset;
+    height: auto;
+    padding: 0;
+    position: initial;
+    width: auto;
+  }
+  .header__nav .nav__open-buttom, .header__nav .menu__close {
+    display: none;
+  }
+  .header__nav .nav__menu {
+    display: flex;
+    transform: translate(0, 0);
+  }
+  .header__nav .menu__list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 0;
+  }
+  .header__nav .list__item a {
+    color: hsl(236, 13%, 42%);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .header__nav .list__item a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+}
 
 main {
   display: grid;
-  gap: 6.4rem;
-  padding: 3.2rem 0;
+  gap: 4rem;
+  padding: 2rem 0;
 }
 @media screen and (min-width: 1024px) {
   main {
-    gap: 7rem 3rem;
+    gap: 4.375rem 1.875rem;
     grid-template-columns: 1fr 350px;
     grid-template-rows: 1fr;
-    padding: 5.5rem 0;
+    padding: 3.4375rem 0;
   }
 }
 main .intro {
   display: grid;
-  gap: 2.4rem;
+  gap: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   main .intro {
-    gap: 2.8rem;
+    gap: 1.75rem;
   }
 }
 main .intro__content {
   display: grid;
-  gap: 1.6rem;
+  gap: 1rem;
 }
 main .intro__content .btn {
-  margin-top: 2.4rem;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 1024px) {
   main .intro__content {
-    gap: 3rem;
+    gap: 1.875rem;
     grid-template-columns: 1fr 1fr;
   }
   main .intro__content .intro-content__title {
-    font-size: 5.6rem;
+    font-size: 3.5rem;
   }
   main .intro__content .btn {
-    margin-top: 1.7rem;
+    margin-top: 1.0625rem;
   }
 }
 main .news-links {
@@ -282,44 +299,44 @@ main .news-links {
 }
 main .news-links__title {
   color: hsl(35, 77%, 62%);
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 3.4rem;
+  margin-bottom: 2.125rem;
 }
 @media screen and (min-width: 1024px) {
   main .news-links__title {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 }
 main .news-links__list {
   display: flex;
   flex-direction: column;
-  gap: 3.1rem;
+  gap: 1.9375rem;
 }
 main .news-links__item {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 main .news-links__item--bottom-bound {
-  padding-bottom: 2.9rem;
+  padding-bottom: 1.8125rem;
   border-bottom: 1px solid hsl(236, 13%, 42%);
 }
 main .news-links__item .item__title a {
   color: hsl(36, 100%, 99%);
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 2.4rem;
+  line-height: 1.5rem;
 }
 main .news-links__item .item__title a:hover {
   color: hsl(35, 77%, 62%);
 }
 main .news-links__item .item__text {
   color: hsl(233, 8%, 79%);
-  font-size: 1.5rem;
+  font-size: 0.9375rem;
   font-style: normal;
 }
 @media screen and (min-width: 1024px) {
@@ -330,7 +347,7 @@ main .news-links__item .item__text {
 main .top-news__list {
   display: flex;
   flex-direction: column;
-  gap: 3.1rem;
+  gap: 1.9375rem;
 }
 @media screen and (min-width: 1024px) {
   main .top-news__list {
@@ -339,27 +356,27 @@ main .top-news__list {
 }
 main .top-news__item-container {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5625rem;
 }
 main .top-news__item .item__img {
   width: 100px;
 }
 main .top-news__item .item__content {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.5625rem;
 }
 main .top-news__item .item__number {
   color: hsl(233, 8%, 79%);
-  font-size: 3.2rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3.2rem;
-  margin-bottom: 0.3rem;
+  line-height: 2rem;
+  margin-bottom: 0.1875rem;
 }
 main .top-news__item .item__title {
   color: hsl(240, 100%, 5%);
-  font-size: 1.7rem;
+  font-size: 1.0625rem;
   font-style: normal;
   font-weight: 800;
-  line-height: 2.4rem;
+  line-height: 1.5rem;
 }
